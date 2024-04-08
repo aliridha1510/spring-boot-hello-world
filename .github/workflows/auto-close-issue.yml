@@ -1,0 +1,19 @@
+name: Project Board Automation
+
+on:
+  project_card:
+    types: [moved]
+
+jobs:
+  check-if-done:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Check if card is in Done column
+      run: |
+        # Placeholder for script logic to check if the project card is in the "Done" column
+        # You might use a third-party action or custom script to interact with the GitHub API here.
+        echo "Placeholder for card check script"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
